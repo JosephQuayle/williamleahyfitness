@@ -13,13 +13,15 @@ html {
   color: white;
 }
 
-#navList {
+#navList,
+#subNavList {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.nav-item {
+.nav-item,
+.sub-nav-item {
   list-style: none;
 }
 
@@ -39,6 +41,33 @@ html {
 
 nav {
   border-bottom: 5px solid rgb(0, 255, 0);
+}
+
+#subnav {
+  /* border-bottom: 5px solid rgb(0, 255, 0); */
+  position: sticky;
+  top: -1px;
+  overflow: hidden;
+  z-index: 1000;
+  background-color: black;
+}
+
+.is-pinned {
+  border-bottom: 5px solid rgb(0, 255, 0);
+}
+
+#subNavList {
+  font-size: 1.3rem;
+  font-family: "Bungee", sans-serif;
+}
+
+#subNavList a {
+  color: white;
+  text-decoration: none;
+}
+
+#subNavList a:hover {
+  color: rgb(0, 255, 0);
 }
 
 #hero {
@@ -93,6 +122,12 @@ h3 {
   background-color: rgb(0, 255, 0);
 }
 
+#isThisYou {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
 .is-this-you {
   display: flex;
   justify-content: center;
@@ -105,7 +140,7 @@ h3 {
 }
 
 .is-this-you .bullet {
-  width: 55%;
+  width: 40%;
 }
 
 .is-this-you p {
@@ -117,4 +152,8 @@ h3 {
 .bullet {
   font-size: 3.5rem;
   color: rgb(0, 255, 0);
+}
+
+.testimonial-card {
+  text-align: center;
 }
