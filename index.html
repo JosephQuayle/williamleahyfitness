@@ -7,82 +7,152 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <title>William Leahy Fitness</title>
   </head>
   <body>
-    <!-- nav -->
-    <nav>
-      <ul id="navList">
-        <li class="nav-item" id="logoContainer">
-          <img src="./logonobg.png" alt="william's logo" />
-        </li>
-        <li class="nav-item" id="name">WILLIAM LEAHY FITNESS</li>
-      </ul>
-    </nav>
-    <!-- subnav -->
-    <div id="subnav">
-      <ul id="subNavList">
-        <li class="sub-nav-item"><a href="#">Prices</a></li>
-        <li class="sub-nav-item"><a href="#">Testimonials</a></li>
-        <li class="sub-nav-item"><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <!-- hero section -->
-    <div class="hero">
-      <video
-        src="./video.mp4"
-        controls
-        autoplay
-        width="100%"
-        onended="showButton()"
-        id="heroVideo"
-      ></video>
-      <button id="endButton">Join Now</button>
-    </div>
-    <!-- quotes -->
-    <div class="quote">
-      <h3>Make Results a Reality</h3>
-      <div class="seperator"></div>
-      <h3>Do you want unnatural looking results?</h3>
-      <div class="seperator"></div>
-    </div>
-    <!-- is this you -->
-    <div id="isThisYou">
-      <h3>Is this you?</h3>
-      <div class="is-this-you">
-        <div class="bullet">-</div>
-        <p>Low confidence</p>
+    <div class="container">
+      <!-- nav -->
+      <nav>
+        <ul id="navList">
+          <li class="nav-item" id="logoContainer">
+            <img src="./logonobg.png" alt="william's logo" />
+          </li>
+          <li class="nav-item" id="name">WILLIAM LEAHY FITNESS</li>
+        </ul>
+      </nav>
+      <!-- subnav -->
+      <div id="subnav">
+        <ul id="subNavList">
+          <li class="sub-nav-item"><a href="#">Prices</a></li>
+          <li class="sub-nav-item"><a href="#">Testimonials</a></li>
+          <li class="sub-nav-item"><a href="#">Contact</a></li>
+        </ul>
       </div>
-      <div class="is-this-you">
-        <div class="bullet">-</div>
-        <p>No discipline</p>
+      <!-- hero section -->
+      <div class="hero">
+        <video
+          src="./video.mp4"
+          controls
+          autoplay
+          width="100%"
+          onended="showButton()"
+          id="heroVideo"
+        ></video>
+        <button id="endButton">Join Now</button>
       </div>
-      <div class="is-this-you">
-        <div class="bullet">-</div>
-        <p>Lost Motivation</p>
+      <!-- quotes -->
+      <div class="quote">
+        <h3>Make Results a Reality</h3>
+        <div class="seperator"></div>
+        <h3>Do you want unnatural looking results?</h3>
+        <div class="seperator"></div>
       </div>
-      <div class="is-this-you">
-        <div class="bullet">-</div>
-        <p>Lack of time</p>
+      <!-- is this you -->
+      <div id="isThisYou">
+        <h3>Is this you?</h3>
+        <div class="is-this-you">
+          <div class="bullet">-</div>
+          <p>Low confidence</p>
+        </div>
+        <div class="is-this-you">
+          <div class="bullet">-</div>
+          <p>No discipline</p>
+        </div>
+        <div class="is-this-you">
+          <div class="bullet">-</div>
+          <p>Lost Motivation</p>
+        </div>
+        <div class="is-this-you">
+          <div class="bullet">-</div>
+          <p>Lack of time</p>
+        </div>
       </div>
-    </div>
-    <div class="seperator"></div>
-    <!-- more quotes -->
-    <div class="quote">
-      <h3>I will teach you the principles I applied</h3>
       <div class="seperator"></div>
-    </div>
-    <!-- how i know it works - about me + testimonials -->
-    <div id="testimonials">
-      <h3>How I know it works</h3>
-      <div class="testimonial-card"><p>william before + after</p></div>
-      <div class="testimonial-card"><p>harvey before + after</p></div>
-      <div class="testimonial-card"><p>guy?? before + after</p></div>
-
-      <div class="seperator"></div>
+      <!-- more quotes -->
+      <div class="quote">
+        <h3>I will teach you the principles I applied</h3>
+        <div class="seperator"></div>
+      </div>
+      <!-- how i know it works - about me + testimonials -->
+      <div id="testimonials">
+        <h3>How I know it works</h3>
+        <div class="testimonial-card"><p>william before + after</p></div>
+        <div class="testimonial-card"><p>harvey before + after</p></div>
+        <div class="testimonial-card"><p>guy?? before + after</p></div>
+      </div>
+      <div class="seperator" style="margin-top: 2.5rem"></div>
+      <div id="pricing">
+        <h3>Prices</h3>
+        <div id="pricingCards">
+          <div class="pricing-card">
+            <div class="pricing-text">
+              <h4 class="offer-heading">Gym Program + Meal Plans</h4>
+              <p class="offer-price monthly">£400 - Monthly</p>
+              <p class="offer-price yearly">£4000 - Yearly</p>
+              <ul class="offer-features">
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />Custom programs
+                  to suit your goals
+                </li>
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />Personalised
+                  meal plans
+                </li>
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />Daily check-ins
+                </li>
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />Form checks
+                </li>
+              </ul>
+            </div>
+            <div class="pricing-btn">
+              <button class="payment-btn">Make The Leap</button>
+            </div>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-text">
+              <h4 class="offer-heading">1-1 Coaching Sessions</h4>
+              <p class="offer-price monthly">£30</p>
+              <ul class="offer-features">
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />1 Hour 30
+                  Minutes
+                </li>
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />I will guide
+                  you through the basics
+                </li>
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />I will teach
+                  proper form
+                </li>
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />You will learn
+                  how to truly push yourself
+                </li>
+              </ul>
+              <p class="offer-price">
+                For experienced trainees looking to go the extra mile
+              </p>
+              <ul class="offer-features">
+                <li>
+                  <img src="./left-arrow.png" alt="arrow icon" />I will help you
+                  to break through plateus by pushing you harder on each and
+                  every set
+                </li>
+              </ul>
+            </div>
+            <div class="pricing-btn">
+              <button class="payment-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="seperator" style="margin-top: 2.5rem"></div>
     </div>
     <script src="./script.js"></script>
   </body>
