@@ -26,8 +26,10 @@
       <!-- subnav -->
       <div id="subnav">
         <ul id="subNavList">
-          <li class="sub-nav-item"><a href="#">Prices</a></li>
-          <li class="sub-nav-item"><a href="#">Testimonials</a></li>
+          <li class="sub-nav-item"><a href="#priceTarget">Prices</a></li>
+          <li class="sub-nav-item">
+            <a href="#testimonialTarget">Testimonials</a>
+          </li>
           <li class="sub-nav-item"><a href="#">Contact</a></li>
         </ul>
       </div>
@@ -46,42 +48,82 @@
       <!-- quotes -->
       <div class="quote">
         <h3>Make Results a Reality</h3>
-        <div class="seperator"></div>
+        <div class="seperator" style="margin-top: 2.5rem"></div>
         <h3>Do you want unnatural looking results?</h3>
-        <div class="seperator"></div>
+        <div class="seperator" style="margin-top: 2.5rem"></div>
       </div>
       <!-- is this you -->
       <div id="isThisYou">
         <h3>Is this you?</h3>
-        <div class="is-this-you">
-          <div class="bullet">-</div>
-          <p>Low confidence</p>
-        </div>
-        <div class="is-this-you">
-          <div class="bullet">-</div>
-          <p>No discipline</p>
-        </div>
-        <div class="is-this-you">
-          <div class="bullet">-</div>
-          <p>Lost Motivation</p>
-        </div>
-        <div class="is-this-you">
-          <div class="bullet">-</div>
-          <p>Lack of time</p>
+        <div id="isThisYouCards">
+          <div class="is-this-you">
+            <!-- <div class="bullet">-</div> -->
+            <p>Low confidence</p>
+          </div>
+          <div class="is-this-you">
+            <!-- <div class="bullet">-</div> -->
+            <p>No discipline</p>
+          </div>
+          <div class="is-this-you">
+            <!-- <div class="bullet">-</div> -->
+            <p>Lost Motivation</p>
+          </div>
+          <div class="is-this-you">
+            <!-- <div class="bullet">-</div> -->
+            <p>Lack of time</p>
+          </div>
         </div>
       </div>
-      <div class="seperator"></div>
+      <div class="seperator" style="margin-top: 2.5rem"></div>
       <!-- more quotes -->
       <div class="quote">
+        <div id="testimonialTarget"></div>
         <h3>I will teach you the principles I applied</h3>
-        <div class="seperator"></div>
       </div>
+      <div class="seperator" style="margin-top: 2.5rem"></div>
       <!-- how i know it works - about me + testimonials -->
       <div id="testimonials">
         <h3>How I know it works</h3>
-        <div class="testimonial-card"><p>william before + after</p></div>
-        <div class="testimonial-card"><p>harvey before + after</p></div>
-        <div class="testimonial-card"><p>guy?? before + after</p></div>
+        <div id="testimonialCards">
+          <div class="testimonial-card" id="williamTesimonial">
+            <h4 class="testimonial-heading">Me</h4>
+            <div class="img-container" style="width: 90%; margin: 0 auto">
+              <img
+                src="./williamBefore.JPG"
+                alt="william before"
+                width="100%"
+              />
+              <img src="./williamAfter.JPG" alt="william after" width="100%" />
+            </div>
+          </div>
+          <div class="testimonial-card" id="harveyTesimonial">
+            <h4 class="testimonial-heading">My brother Harvey</h4>
+            <div class="img-container" style="width: 90%; margin: 0 auto">
+              <img
+                src="./williamBefore.JPG"
+                alt="william before"
+                width="100%"
+              />
+              <img src="./williamAfter.JPG" alt="william after" width="100%" />
+            </div>
+          </div>
+          <div class="testimonial-card" id="anotherTesimonial">
+            <h4 class="testimonial-heading">Someone Else</h4>
+            <div class="img-container" style="width: 90%; margin: 0 auto">
+              <img
+                src="./williamBefore.JPG"
+                alt="william before"
+                width="100%"
+              />
+              <img src="./williamAfter.JPG" alt="william after" width="100%" />
+            </div>
+          </div>
+          <div class="testimonial-btns">
+            <button id="left"><</button>
+            <button id="right">></button>
+          </div>
+          <div id="priceTarget"></div>
+        </div>
       </div>
       <div class="seperator" style="margin-top: 2.5rem"></div>
       <div id="pricing">
@@ -94,18 +136,20 @@
               <p class="offer-price yearly">£4000 - Yearly</p>
               <ul class="offer-features">
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />Custom programs
-                  to suit your goals
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>Custom programs to suit your goals</p>
                 </li>
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />Personalised
-                  meal plans
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>Personalised meal plans</p>
                 </li>
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />Daily check-ins
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>Daily check-ins</p>
                 </li>
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />Form checks
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>Form checks</p>
                 </li>
               </ul>
             </div>
@@ -119,20 +163,20 @@
               <p class="offer-price monthly">£30</p>
               <ul class="offer-features">
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />1 Hour 30
-                  Minutes
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>1 Hour 30 Minutes</p>
                 </li>
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />I will guide
-                  you through the basics
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>I will guide you through the basics</p>
                 </li>
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />I will teach
-                  proper form
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>I will teach proper form</p>
                 </li>
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />You will learn
-                  how to truly push yourself
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>You will learn how to truly push yourself</p>
                 </li>
               </ul>
               <p class="offer-price">
@@ -140,9 +184,11 @@
               </p>
               <ul class="offer-features">
                 <li>
-                  <img src="./left-arrow.png" alt="arrow icon" />I will help you
-                  to break through plateus by pushing you harder on each and
-                  every set
+                  <img src="./left-arrow.png" alt="arrow icon" />
+                  <p>
+                    I will help you break through plateus by pushing you on each
+                    set
+                  </p>
                 </li>
               </ul>
             </div>
