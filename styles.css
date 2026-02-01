@@ -173,9 +173,19 @@ h3 {
   text-align: center;
   background-color: rgb(29, 29, 29);
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding-bottom: 2rem;
+}
+
+.testimonial-card img {
+  .testimonial-card img {
+    /* Prevents the ghost image "drag" effect */
+    user-select: none;
+    -webkit-user-drag: none;
+    /* Ensures the image doesn't block touch signals */
+    pointer-events: none;
+  }
 }
 
 .testimonial-btns {
@@ -216,7 +226,7 @@ h3 {
   /* border: 2px solid rgb(0, 255, 0); */
   background-color: rgb(29, 29, 29);
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
