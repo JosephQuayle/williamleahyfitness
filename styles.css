@@ -178,14 +178,10 @@ h3 {
   padding-bottom: 2rem;
 }
 
-.testimonial-card img {
-  .testimonial-card img {
-    /* Prevents the ghost image "drag" effect */
-    user-select: none;
-    -webkit-user-drag: none;
-    /* Ensures the image doesn't block touch signals */
-    pointer-events: none;
-  }
+.testimonial-card .img-container {
+  height: 600px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .testimonial-btns {

@@ -44,38 +44,3 @@ leftBtn.addEventListener("click", function () {
 
 // Initialize the first view
 showCard(currentIndex);
-
-// 1. Select the container (parent of all cards)
-const container = document.querySelector(".testimonial-card");
-
-let touchstartX = 0;
-let touchendX = 0;
-
-// 2. Add listeners ONLY to the container
-container.addEventListener(
-  "touchstart",
-  (e) => {
-    // changedTouches[0] handles the first finger to touch the screen
-    touchstartX = e.changedTouches[0].screenX;
-  },
-  { passive: true },
-);
-
-container.addEventListener(
-  "touchend",
-  (e) => {
-    touchendX = e.changedTouches[0].screenX;
-    handleSwipe();
-  },
-  { passive: true },
-);
-
-function handleSwipe() {
-  const threshold = 50;
-  if (touchendX < touchstartX - threshold) {
-    rightBtn.click(); // Swipe Left -> Next
-  }
-  if (touchendX > touchstartX + threshold) {
-    leftBtn.click(); // Swipe Right -> Prev
-  }
-}
