@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 html {
@@ -109,6 +109,37 @@ nav {
   filter: brightness(0.3); /* Reduces brightness to 40% */
 }
 
+.scroller {
+  max-width: 800px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 15%,
+    white 85%,
+    transparent
+  );
+}
+
+.scroller-inner {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  flex-wrap: nowrap;
+  padding: 1rem 0;
+  animation: scroll var(--animation-duration, 10s) linear infinite;
+}
+
+.scroller-inner:hover {
+  animation-play-state: paused; /* Pause on hover for readability */
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 1rem));
+  }
+}
+
 .quote,
 h3 {
   font-size: 2.5rem;
@@ -171,36 +202,60 @@ h3 {
 
 .testimonial-card {
   text-align: center;
-  background-color: rgb(29, 29, 29);
+  /* background-color: rgb(29, 29, 29); */
   border-radius: 5px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  /* height: 600px; */
 }
 
-.testimonial-card .img-container {
-  height: 600px;
-  width: 90%;
+.testimonial-img-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.testimonial-card h4 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.testimonial-card .testimonial-img-container {
+  width: 100%;
   margin: 0 auto;
+}
+
+.testimonial-img-container img {
+  width: 100%;
+  border-radius: 20px;
 }
 
 .testimonial-btns {
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .testimonial-btns button {
-  cursor: pointer;
+  /* cursor: pointer;
   background-color: rgb(0, 255, 0);
   border: none;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 2rem; */
+  background-color: transparent;
+  border: none;
 }
 
-.testimonial-btns button:hover {
-  background-color: rgb(0, 175, 0);
+.testimonial-btns img {
+  filter: invert(73%) sepia(49%) saturate(6622%) hue-rotate(82deg)
+    brightness(112%) contrast(132%);
 }
 
-#williamTesimonial {
+.testimonial-btns img:hover {
+  filter: invert(26%) sepia(29%) saturate(3065%) hue-rotate(88deg)
+    brightness(107%) contrast(105%);
+}
+
+/* #williamTesimonial {
   display: block;
 }
 
@@ -210,7 +265,7 @@ h3 {
 
 #anotherTesimonial {
   display: none;
-}
+} */
 
 #pricingCards {
   display: flex;
@@ -219,11 +274,33 @@ h3 {
 }
 
 .pricing-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  top: -150px; /* Adjust position to top */
+  left: -150px; /* Adjust position to left */
+  width: 300px;
+  height: 300px;
+  background-color: #4ff800; /* The orange glow color */
+  border-radius: 50%; /* Make it a soft circle */
+  filter: blur(50px); /* Adjust blur strength as needed */
+  opacity: 0.3; /* Adjust visibility */
+  pointer-events: none; /* Allows clicks to pass through if needed */
+}
+
+.pricing-card {
   /* border: 2px solid rgb(0, 255, 0); */
-  background-color: rgb(29, 29, 29);
+  /* background-color: rgb(29, 29, 29); */
   border-radius: 5px;
   width: 90%;
   margin: 0 auto;
+  background-color: rgb(8, 8, 8);
+  /* box-shadow: inset 0 0 10px #f8a100; */
 }
 
 .offer-heading,

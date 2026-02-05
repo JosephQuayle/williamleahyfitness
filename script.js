@@ -14,33 +14,47 @@ const observer = new IntersectionObserver(
 );
 observer.observe(subNav);
 
-const leftBtn = document.getElementById("left");
-const rightBtn = document.getElementById("right");
-const testimonialCards = document.querySelectorAll(".testimonial-card");
-let currentIndex = 0; // Start at the first card (index 0)
+//testimonial stuff
+// const leftBtn = document.getElementById("left");
+// const rightBtn = document.getElementById("right");
+// const testimonialCards = document.querySelectorAll(".testimonial-card");
+// let currentIndex = 0; // Start at the first card (index 0)
 
-function showCard(index) {
-  // 1. Hide all cards
-  testimonialCards.forEach((card) => {
-    card.style.setProperty("display", "none", "important");
-  });
+// function showCard(index) {
+//   // 1. Hide all cards
+//   testimonialCards.forEach((card) => {
+//     card.style.setProperty("display", "none", "important");
+//   });
 
-  // 2. Show only the active card
-  testimonialCards[index].style.display = "block";
-}
+//   // 2. Show only the active card
+//   testimonialCards[index].style.display = "block";
+// }
 
-rightBtn.addEventListener("click", function () {
-  // Move forward, loop to 0 if at the end
-  currentIndex = (currentIndex + 1) % testimonialCards.length;
-  showCard(currentIndex);
+// rightBtn.addEventListener("click", function () {
+//   // Move forward, loop to 0 if at the end
+//   currentIndex = (currentIndex + 1) % testimonialCards.length;
+//   showCard(currentIndex);
+// });
+
+// leftBtn.addEventListener("click", function () {
+//   // Move backward, loop to end if at 0
+//   currentIndex =
+//     (currentIndex - 1 + testimonialCards.length) % testimonialCards.length;
+//   showCard(currentIndex);
+// });
+
+// // Initialize the first view
+// showCard(currentIndex);
+//-----------------------------
+
+//smoother quote scroll
+const scroller = document.querySelector(".scroller");
+const scrollerInner = scroller.querySelector(".scroller-inner");
+
+// Clone the content for a seamless loop
+const content = Array.from(scrollerInner.children);
+content.forEach((item) => {
+  const duplicatedItem = item.cloneNode(true);
+  duplicatedItem.setAttribute("aria-hidden", true); // Hide from screen readers
+  scrollerInner.appendChild(duplicatedItem);
 });
-
-leftBtn.addEventListener("click", function () {
-  // Move backward, loop to end if at 0
-  currentIndex =
-    (currentIndex - 1 + testimonialCards.length) % testimonialCards.length;
-  showCard(currentIndex);
-});
-
-// Initialize the first view
-showCard(currentIndex);
